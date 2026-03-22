@@ -50,9 +50,9 @@ export function AppSidebar() {
             >
               <item.icon className="h-4 w-4 shrink-0" />
               {!collapsed && <span className="truncate">{item.title}</span>}
-              {!collapsed && "badge" in item && item.badge ? (
+              {!collapsed && "badge" in item && (item as any).badge ? (
                 <Badge variant="destructive" className="ml-auto h-5 min-w-5 justify-center rounded-full px-1.5 text-[10px]">
-                  {item.badge}
+                  {(item as any).badge}
                 </Badge>
               ) : null}
             </NavLink>
