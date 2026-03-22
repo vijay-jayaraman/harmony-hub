@@ -21,7 +21,7 @@ export default function Leaderboard() {
     .map(e => ({ ...e, score: getScore(e) }))
     .sort((a, b) => b.score - a.score);
 
-  const medalColors = ["text-warning", "text-muted-foreground", "text-orange-600"];
+  const medalColors = ["text-warning", "text-muted-foreground", "text-warning"];
 
   return (
     <AppLayout>
